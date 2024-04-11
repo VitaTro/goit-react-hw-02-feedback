@@ -1,0 +1,19 @@
+.container{
+    font-size: 35px;
+    text-align: center;
+    margin: 0 auto;
+   display: flex;
+   justify-content: center;
+    gap: 20px;
+}
+.button {
+    font-size: 25px;
+    margin-top: 25px;
+   color: blue;
+}
+.button:hover {
+    background-color: aqua;
+}
+.button:focus {
+    background-color: aquamarine;
+}
