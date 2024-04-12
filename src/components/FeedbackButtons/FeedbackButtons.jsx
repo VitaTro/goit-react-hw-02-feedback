@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import css from "./FeedbackButtons.module.css";
 
+
+// додавання притисків
 const FeedbackButtons = ({ options, onLeaveFeedback }) => {
     return (
       <div className={css.container}>

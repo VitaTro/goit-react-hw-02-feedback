@@ -10,6 +10,8 @@ const Feedback = () => {
     bad: 0,
   });
 
+
+  // додавання відгуку по одному
   const handleFeedback = (type) => {
     setFeedback((prevFeedback) => ({
       ...prevFeedback,
@@ -17,10 +19,14 @@ const Feedback = () => {
     }));
   };
 
+
+  // разом всі відгуки
   const countTotalFeedback = () => {
     return feedback.good + feedback.neutral + feedback.bad;
   };
 
+
+  // процентовка всіх хороших відгуків
   const countPositiveFeedbackPercentage = () => {
     const total = countTotalFeedback();
     return total > 0 ? Math.round((feedback.good / total) * 100) : 0;

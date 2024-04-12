@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import css from "./Statistics.module.css";
 
+
+// додавання до хтмл колонку з відгуками
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     return(
       
