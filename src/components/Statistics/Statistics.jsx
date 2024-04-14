@@ -25,8 +25,7 @@ import css from "./Statistics.module.css";
 const Statistics = (props) => {
     const { good, neutral, bad, total, positivePercentage } = props;
     return (
-        <div>
-        <h2 className={css['title-two']}>Statistics:</h2>
+        
         <ul className={css.item}>
             <li>Good: {good}</li>
             <li>Neutral: {neutral}</li>
@@ -34,7 +33,7 @@ const Statistics = (props) => {
             <li>Total: {total}</li>
             <li>Positive feedback: {positivePercentage} %</li>
         </ul>
-        </div>
+
     );
 };
 

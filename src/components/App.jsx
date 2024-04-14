@@ -3,10 +3,11 @@ import React, { Component } from "react";
 import Section from "./Section/Section";
 import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 import Statistics from "./Statistics/Statistics";
-import css from "./App.module.css";
+import Notification from "./Notification/Notification";
+//   const [state, setState] =// import css from "./App.module.css";
 
 // export const App = () => {
-//   const [state, setState] = useState({
+//  useState({
 //     good: 0,
 //     neutral: 0,
 //     bad: 0,
@@ -18,7 +19,7 @@ class App extends Component {
   state = {
     good: 0,
     neutral: 0,
-    bad: 0
+    bad: 0,
   };
 
   // // event.currentTarget в React — це властивість об’єкта події, яка ідентифікує елемент, до якого прикріплений обробник події. 
@@ -101,18 +102,19 @@ this.setState((state) => ({ [name]: state[name] + 1 }));
     <Section title="Please leave feedback">
 					<FeedbackOptions options={actualState} onLeaveFeedback={this.handleFeedback} />
 				</Section>        
-{total ? (
-  <Statistics 
-        good={good}
-        neutral={neutral}
-        bad={bad}
-        total={total}
-        positivePercentage={positivePercentage}/>
-) : (
-<p className={css['title-two']}>No feedback given.</p>
-)}
-       
-    <Section  />
+
+  <Section title="Statistics">
+    {total ? (
+      <Statistics
+      good={good}
+      neutral={neutral}
+      bad={bad}
+      total={total}
+      positivePercentage={positivePercentage} />
+    ) : (
+     <Notification message="No feedback given." />
+    )}
+  </Section> 
     </>
   );
   }
